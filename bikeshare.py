@@ -213,7 +213,8 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-
+        
+  # Ask user if raw data should be presented
         x=5
         while True:
             raw_data=input("\nWould you like to see raw data? Enter yes or no.\n").lower()
