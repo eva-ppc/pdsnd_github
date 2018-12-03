@@ -1,15 +1,17 @@
 ### Date created
-Include the date you created this project and README file.
+December,2 2018
 
 ### Project Title
-Replace the Project Title
+Bike-sharing data - Udacity Nanodegree project
 
 ### Description
-Describe what your project is about and what it does
+The purpose of this project is to analyze bikeshare data from New York City, Washington and Chicago to uncover trends and insights on users and usage patterns.  
 
 ### Files used
-Include the files used
+bikeshare.py
+washington.csv
+new_york_city.csv
+chicago.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://github.com/ozlerhakan/bikeshare/blob/master/bikeshare.py

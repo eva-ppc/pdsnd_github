@@ -117,7 +117,6 @@ def time_stats(df):
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
-
     print("\nCalculating The Most Popular Stations and Trip...\n")
     start_time = time.time()
 
@@ -130,12 +129,11 @@ def station_stats(df):
     print("The most commonly used end station :", most_common_end_station)
 
     # display most frequent combination of start station and end station trip
-    df['Start End'] = df['Start Station'].map(str) + '&' + df['End Station']
+    df['Start End'] = df['Start Station'].map(str) + ' & ' + df['End Station']
 
     most_common_start_end_station = df['Start End'].value_counts().idxmax()
 
-    print("The most commonly used start station and end station : {}"\
-            .format(most_common_start_end_station))
+    print("The most commonly used start station and end station :",most_common_start_end_station)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print("-"*40)
@@ -208,7 +206,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-  # Ask user if raw data should be presented
+# Ask user if raw data should be presented
         x=5
         while True:
             raw_data=input("\nWould you like to see raw data? Enter yes or no.\n").lower()
@@ -221,6 +219,8 @@ def main():
                 else:
                     print("Thanks for your attention!")
                     exit()
+
+
 
 
 if __name__ == "__main__":
