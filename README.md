@@ -5,7 +5,7 @@ December,2 2018
 Bike-sharing data - Udacity Nanodegree project
 
 ### Description
-The purpose of this project is to analyse bikeshare information from New York City, Washington and Chicago to uncover trends and insights on users and usage patterns.  
+The purpose of this project is to analyze bikeshare data from New York City, Washington and Chicago to uncover trends and insights on users and usage patterns.  
 
 ### Files used
 bikeshare.py
@@ -15,4 +15,3 @@ chicago.csv
 
 ### Credits
 https://github.com/ozlerhakan/bikeshare/blob/master/bikeshare.py
-
