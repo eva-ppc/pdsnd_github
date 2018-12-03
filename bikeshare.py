@@ -165,41 +165,35 @@ def user_stats(df):
 
     # Display counts of user types
     user_counts = df["User Type"].value_counts()
+    print(user_counts)
 
     # Display counts of gender
-    while True:
-        try:
-            gender_counts = df["Gender"].value_counts()
-            break
-        except KeyError:
-            print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
+    if "Gender" in df.columns:
+        gender_counts = df["Gender"].value_counts()
+        print(gender_counts)
+    else:
+        print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
 
     # Display earliest, most recent, and most common year of birth
     # Most common birth year
-    while True:
-        try:
-            birth_year = df["Birth Year"]
-            most_common_birth_year = birth_year.mode()[0]
-            print("The most common birth year is", most_common_birth_year)
-            break
-        except KeyError:
-            print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
+    if "Birth Year" in df.columns:
+        birth_year = df["Birth Year"]
+        most_common_birth_year = birth_year.mode()[0]
+        print("The most common birth year is", most_common_birth_year)
+    else:
+        print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
     # Most recent birth Year
-    while True:
-        try:
-            most_recent_birth = birth_year.max()
-            print("The most recent birth year:", most_recent_birth)
-            break
-        except KeyError:
-            print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
+    if "Birth Year" in df.columns:
+        most_recent_birth = birth_year.max()
+        print("The most recent birth year:", most_recent_birth)
+    else:
+        print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
     # Least recent birth Year
-    while True:
-        try:
-            least_recent_birth_year = birth_year.min()
-            print("The most earliest birth year:", least_recent_birth_year)
-            break
-        except KeyError:
-            print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
+    if "Birth Year" in df.columns:
+        least_recent_birth_year = birth_year.min()
+        print("The most earliest birth year:", least_recent_birth_year)
+    else:
+        print("Oops!  That was no valid parametr for the city you've picked. Select Another city and try again...")
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -213,7 +207,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        
+
   # Ask user if raw data should be presented
         x=5
         while True:
